@@ -4,7 +4,7 @@ class User {
   id: string;
   name: string;
   email: string;
-  passwprd: string;
+  password: string;
   userName: string;
   avatar: string;
   isAdmin: boolean;
