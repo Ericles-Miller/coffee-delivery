@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only  --ignorewatch node_modules --respawn src/shared/infra/http/server.ts "
+    "dev": "ts-node-dev --transpile-only --poll --ignore-watch node_modules --respawn src/shared/http/server.ts"
   },
   "repository": "https://github.com/Ericles-Miller/coffe-delivery.git",
   "author": "Ericles-Miller <ericlesmiller15@gmail.com>",
