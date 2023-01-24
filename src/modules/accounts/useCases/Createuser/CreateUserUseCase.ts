@@ -6,10 +6,11 @@ class CreateUserUseCase {
     private userRepository: IUserRepository,
   ) {}
 
-  execute({ name, password, email }: ICreatedUserDTO) {
-    this.userRepository.create({
+  execute({ name, password, email, userName }: ICreatedUserDTO) {
+    const user = this.userRepository.create({
       name,
       password,
+      userName,
       email,
     });
   }
