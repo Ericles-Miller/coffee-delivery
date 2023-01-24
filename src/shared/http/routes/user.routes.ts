@@ -1,11 +1,7 @@
-import { Router } from "express";
-
+import { Router } from 'express';
 
 const userRoutes = Router();
 
-const users = [];
+userRoutes.post('/');
 
-userRoutes.post("/client");
-
-
-export { userRoutes};
+export { userRoutes };

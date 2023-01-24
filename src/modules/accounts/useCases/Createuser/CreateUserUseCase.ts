@@ -1,20 +1,17 @@
-import { IUserRepository } from "../../Repositories/IUserRepository";
-
+import { IUserRepository } from '../../Repositories/IUserRepository';
 
 class CreateUserUseCase {
-    constructor (
-      private userRepository: IUserRepository,
+  constructor(
+    private userRepository: IUserRepository,
+  ) {}
 
-    ){}
-
-    execute ({name, password, email }: ICreatedUserDTO) {
-      
-      this.userRepository.create({
-        name,
-        password,
-        email
-      });
-    }
+  execute({ name, password, email }: ICreatedUserDTO) {
+    this.userRepository.create({
+      name,
+      password,
+      email,
+    });
+  }
 }
 
-export { CreateUserUseCase};
+export { CreateUserUseCase };

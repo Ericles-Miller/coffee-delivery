@@ -1,13 +1,13 @@
-import { Router } from "express";
-import { userRoutes } from "./user.routes";
+import { Router } from 'express';
+
+import { userRoutes } from './user.routes';
 
 const router = Router();
 
 /* ====================================================================
-                         rotas de cada entidade
-   ====================================================================*/
+                      rotas de cada entidade
+   ==================================================================== */
 
 router.use('/users', userRoutes);
 
-
-export {router}
+export { router };
