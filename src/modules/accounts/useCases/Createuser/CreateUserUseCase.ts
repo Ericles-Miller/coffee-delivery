@@ -1,3 +1,4 @@
+import { ICreatedUserDTO } from '../../DTOs/ICreateUserDTO';
 import { IUserRepository } from '../../Repositories/IUserRepository';
 
 class CreateUserUseCase {

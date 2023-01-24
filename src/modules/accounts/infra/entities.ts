@@ -6,13 +6,13 @@ class User {
   email: string;
   password: string;
   userName: string;
-  avatar: string;
-  isAdmin: boolean;
-  create_at: Date;
+  // avatar: string;
+  // isAdmin: boolean;
+  // create_at: Date;
 
   constructor() {
     if (!this.id) {
-      this.id = new uuidv4();
+      this.id = new uuidV4();
     }
   }
 }
