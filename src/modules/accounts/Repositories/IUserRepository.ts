@@ -4,5 +4,4 @@ import { User } from '../infra/entities';
 interface IUserRepository {
     create(data: ICreatedUserDTO): User[];
 }
-
 export { IUserRepository };
