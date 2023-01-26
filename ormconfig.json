@@ -1,0 +1,9 @@
+{
+    "type":"postgres",
+    "host": "localhost",
+    "username":"postgres",
+    "password":"@18er0821",
+    "port":5432,
+    "database": "coffeeDelivery"    
+}
+
