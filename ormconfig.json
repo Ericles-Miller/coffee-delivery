@@ -1,0 +1,13 @@
+{
+    "type": "postgres",
+    "port": 5432,
+    "host": "localhost", // Aqui fica como localhost
+    "username": "docker",
+    "password": "@18er0821",
+    "database": "coffee_delivery", 
+    "migrations": ["./src/database/migrations/*.ts"],
+    "entities": ["./src/modules/**/entities/*.ts"],
+    "cli": {
+      "migrationsDir": "./src/database/migrations"
+    }
+  }

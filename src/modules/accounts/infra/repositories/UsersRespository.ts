@@ -1,5 +1,3 @@
-import { response } from 'express';
-
 import { ICreatedUserDTO } from '../../DTOs/ICreateUserDTO';
 import { IUserRepository } from '../../Repositories/IUserRepository';
 import { User } from '../entities';
