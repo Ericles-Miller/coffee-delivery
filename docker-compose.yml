@@ -3,21 +3,21 @@ version: "3.9"
 services:
   database: #ESSE É O NOME DO SERVICE QUE DEVE ESTAR NO ARQUIVO DE CRIAÇÃO DE CONEXÃO
     image: postgres
-    container_name: database_ignite
+    container_name: database_coffee_delivery
     restart: always
     ports: 
       - 5432:5432
     environment:
       - POSTGRES_USER=docker
-      - POSTGRES_PASSWORD=ignite
-      - POSTGRES_DB=rentx
+      - POSTGRES_PASSWORD=@18er0821
+      - POSTGRES_DB=coffee_delivery
     volumes:
       - pgdata:/data/postgres
 
 
   app:
     build: .
-    container_name: rentx
+    container_name: coffee_delivery
     restart: always
     ports: 
       - 3333:3333
