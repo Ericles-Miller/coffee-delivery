@@ -6,7 +6,8 @@ interface IOptions {
 
 getConnectionOptions().then((options) => {
   const newOptions = options as IOptions;
-  newOptions.host = 'docker'; // Essa opção deverá ser EXATAMENTE o nome dado ao service do banco de dados
+  // host tem que ser igual a localhost ou docker
+  newOptions.host = 'localhost'; // Essa opção deverá ser EXATAMENTE o nome dado ao service do banco de dados
   createConnection({
     ...options,
   });
