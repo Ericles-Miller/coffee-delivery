@@ -1,19 +1,19 @@
-import { ICreateAddressDTO } from '../../../DTOs/ICreateAddressDTO';
-import { IAddressRepository } from '../../../Repositories/IAddressRepository';
-
 import { Repository, getRepository } from 'typeorm';
-import { Address } from '../entities/Address';
+
+import { ICreateAdressesDTO } from '../../../DTOs/ICreateAdressesDTO';
+import { IAddressRepository } from '../../../Repositories/IAddressRepository';
+import { Adresses } from '../entities/Adresses';
 
 class AddressRepository implements IAddressRepository {
-  private repository: Repository<Address>
+  private repository: Repository<Adresses>
 
   constructor() {
-    this.repository = getRepository(Address);
+    this.repository = getRepository(Adresses);
   }
 
   async create({
     id, number, cep, city, complement, district, street, uf,
-  }: ICreateAddressDTO):Promise<void> {
+  }: ICreateAdressesDTO):Promise<void> {
     const address = this.repository.create({
       id,
       cep,

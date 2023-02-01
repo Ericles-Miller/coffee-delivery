@@ -2,7 +2,7 @@ import { Column, Entity, PrimaryColumn } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
 
 @Entity('endereco')
-class Address {
+class Adresses {
   @PrimaryColumn()
   id?: string;
 
@@ -34,4 +34,4 @@ class Address {
   }
 }
 
-export { Address };
+export { Adresses };
