@@ -1,10 +1,10 @@
 import { Repository, getRepository } from 'typeorm';
 
 import { ICreateAdressesDTO } from '../../../DTOs/ICreateAdressesDTO';
-import { IAddressRepository } from '../../../Repositories/IAddressRepository';
+import { IAdressesRepository } from '../../../Repositories/IAdressesRepository';
 import { Adresses } from '../entities/Adresses';
 
-class AddressRepository implements IAddressRepository {
+class AdressesRepository implements IAdressesRepository {
   private repository: Repository<Adresses>
 
   constructor() {
@@ -29,4 +29,4 @@ class AddressRepository implements IAddressRepository {
   }
 }
 
-export { AddressRepository };
+export { AdressesRepository };
