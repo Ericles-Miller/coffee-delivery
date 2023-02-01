@@ -5,19 +5,25 @@ import { v4 as uuidV4 } from 'uuid';
 class Address {
   @PrimaryColumn()
   id?: string;
+
   @Column()
   cep: number;
 
   @Column()
   street: string;
+
   @Column()
   number: number;
+
   @Column()
   district: string;
+
   @Column()
   complement?: string;
+
   @Column()
   city: string;
+
   @Column()
   uf: string;
 
