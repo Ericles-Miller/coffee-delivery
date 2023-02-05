@@ -32,7 +32,6 @@ class CreateAddressUseCase {
       city,
       uf,
     });
-
     return address;
   }
 }
