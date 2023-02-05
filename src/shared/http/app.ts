@@ -1,6 +1,7 @@
 import express from 'express';
 
 import 'reflect-metadata';
+import '../Container';
 // import createConnection from '../database';
 import { router } from './routes';
 
