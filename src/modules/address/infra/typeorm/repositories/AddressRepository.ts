@@ -1,14 +1,14 @@
 import { Repository, getRepository } from 'typeorm';
 
-import { ICreateAdressesDTO } from '../../../DTOs/ICreateAdressesDTO';
+import { ICreateAdressesDTO } from '../../../DTOs/ICreateAddressDTO';
 import { IAdressesRepository } from '../../../Repositories/IAdressesRepository';
-import { Adresses } from '../entities/Adresses';
+import { Address } from '../entities/Address';
 
-class AdressesRepository implements IAdressesRepository {
-  private repository: Repository<Adresses>
+class AddressRepository implements IAdressesRepository {
+  private repository: Repository<Address>
 
   constructor() {
-    this.repository = getRepository(Adresses);
+    this.repository = getRepository(Address);
   }
 
   async create({
@@ -29,4 +29,4 @@ class AdressesRepository implements IAdressesRepository {
   }
 }
 
-export { AdressesRepository };
+export { AddressRepository };

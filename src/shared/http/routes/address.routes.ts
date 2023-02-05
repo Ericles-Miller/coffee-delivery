@@ -2,6 +2,6 @@ import { Router } from 'express';
 
 const addressRoutes = Router();
 
-addressRoutes.post('/');
+addressRoutes.post('/create');
 
 export { addressRoutes };

@@ -1,4 +1,4 @@
-interface ICreateAdressesDTO {
+interface ICreateAddressDTO {
     id?: string;
     cep: number;
     street: string;
@@ -9,4 +9,4 @@ interface ICreateAdressesDTO {
     number: number;
 }
 
-export { ICreateAdressesDTO };
+export { ICreateAddressDTO };

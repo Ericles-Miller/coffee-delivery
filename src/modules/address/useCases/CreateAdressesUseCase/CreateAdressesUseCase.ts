@@ -1,6 +1,6 @@
 import { inject } from 'tsyringe';
 
-import { AdressesRepository } from '../../infra/typeorm/repositories/AdressesRepository';
+import { AdressesRepository } from '../../infra/typeorm/repositories/AddressRepository';
 import { IAdressesRepository } from '../../Repositories/IAdressesRepository';
 
 class CreateAdressesUseCase {
@@ -8,6 +8,10 @@ class CreateAdressesUseCase {
     @inject(AdressesRepository)
     private adressesRepository: IAdressesRepository,
   ) {}
+
+  execute() {
+
+  }
 }
 
 export { CreateAdressesUseCase };
