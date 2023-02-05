@@ -1,14 +1,14 @@
-import { createConnection, Connection, getConnectionOptions } from 'typeorm';
+import { createConnection, getConnectionOptions } from 'typeorm';
 
-export default async () : Promise<Connection> => {
-  const defaultOptions = await getConnectionOptions();
-  return createConnection(
-    Object.assign(defaultOptions, {
-      // host: process.env.NODE_ENV === 'test' ? 'localhost' : host,
-      database: process.env.NODE_ENV === 'test' ? 'coffee_delivery_test' : defaultOptions.database,
-      /** as linhas acima referenciam o banco de dados para refer"enciar com o banco de dados
-       * de teste. Essa config foi feita no arquivo de .env
-       */
-    }),
-  );
-};
+interface IOptions {
+  host: string;
+}
+
+getConnectionOptions().then((options) => {
+  const newOptions = options as IOptions;
+  // host tem que ser igual a localhost ou docker
+  newOptions.host = 'localhost'; // Essa opção deverá ser EXATAMENTE o nome dado ao service do banco de dados
+  createConnection({
+    ...options,
+  });
+});

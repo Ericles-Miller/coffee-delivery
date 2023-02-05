@@ -1,37 +1,37 @@
-import { MigrationInterface, QueryRunner, Table } from 'typeorm';
+import { MigrationInterface, Table, QueryRunner } from 'typeorm';
 
-export class CreateEndereco1674839310039 implements MigrationInterface {
+export class CreateAddress1675626798380 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'endereco',
-          columns: [
+        name: 'address',
+        columns: [
           {
             name: 'id',
             type: 'uuid',
           },
           {
             name: 'cep',
-            type: 'varchar',
-          },
-          {
-            name: 'rua',
-            type: 'varchar',
-          },
-          {
-            name: 'numero',
             type: 'int',
           },
           {
-            name: 'bairro',
+            name: 'street',
             type: 'varchar',
           },
           {
-            name: 'complemento',
+            name: 'number',
+            type: 'int',
+          },
+          {
+            name: 'district',
             type: 'varchar',
           },
           {
-            name: 'cidade',
+            name: 'complement',
+            type: 'varchar',
+          },
+          {
+            name: 'city',
             type: 'varchar',
           },
           {
@@ -44,7 +44,6 @@ export class CreateEndereco1674839310039 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('endereco');
+    await queryRunner.dropTable('address');
   }
 }
-
