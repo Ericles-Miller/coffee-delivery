@@ -1,13 +1,17 @@
 import { inject } from 'tsyringe';
 
-import { AdressesRepository } from '../../infra/typeorm/repositories/AdressesRepository';
-import { IAdressesRepository } from '../../Repositories/IAdressesRepository';
+import { AddressRepository } from '../../infra/typeorm/repositories/AddressRepository';
+import { IAddressRepository } from '../../Repositories/IAdressesRepository';
 
-class CreateAdressesUseCase {
+class CreateAddressUseCase {
   constructor(
-    @inject(AdressesRepository)
-    private adressesRepository: IAdressesRepository,
+    @inject(AddressRepository)
+    private addressRepository: IAddressRepository,
   ) {}
+
+  execute() {
+
+  }
 }
 
-export { CreateAdressesUseCase };
+export { CreateAddressUseCase };

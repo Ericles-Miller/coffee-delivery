@@ -1,19 +1,19 @@
 import { Repository, getRepository } from 'typeorm';
 
-import { ICreateAdressesDTO } from '../../../DTOs/ICreateAdressesDTO';
+import { ICreateAddressDTO } from '../../../DTOs/ICreateAddressDTO';
 import { IAdressesRepository } from '../../../Repositories/IAdressesRepository';
-import { Adresses } from '../entities/Adresses';
+import { Address } from '../entities/Address';
 
-class AdressesRepository implements IAdressesRepository {
-  private repository: Repository<Adresses>
+class AddressRepository implements IAdressesRepository {
+  private repository: Repository<Address>
 
   constructor() {
-    this.repository = getRepository(Adresses);
+    this.repository = getRepository(Address);
   }
 
   async create({
     id, number, cep, city, complement, district, street, uf,
-  }: ICreateAdressesDTO):Promise<void> {
+  }: ICreateAddressDTO):Promise<void> {
     const address = this.repository.create({
       id,
       cep,
@@ -29,4 +29,4 @@ class AdressesRepository implements IAdressesRepository {
   }
 }
 
-export { AdressesRepository };
+export { AddressRepository };
