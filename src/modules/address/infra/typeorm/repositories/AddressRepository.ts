@@ -26,7 +26,6 @@ class AddressRepository implements IAddressRepository {
     });
 
     await this.repository.save(address);
-
     return address;
   }
 }

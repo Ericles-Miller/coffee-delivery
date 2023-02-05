@@ -1,7 +1,6 @@
-import { inject } from 'tsyringe';
+import { inject, injectable } from 'tsyringe';
 
 import { Address } from '../../infra/typeorm/entities/Address';
-import { AddressRepository } from '../../infra/typeorm/repositories/AddressRepository';
 import { IAddressRepository } from '../../Repositories/IAdressesRepository';
 
 interface IRequest{
@@ -14,9 +13,10 @@ interface IRequest{
     uf: string;
 }
 
+@injectable()
 class CreateAddressUseCase {
   constructor(
-    @inject(AddressRepository)
+    @inject('AddressRepository')
     private addressRepository: IAddressRepository,
   ) {}
 
@@ -32,7 +32,6 @@ class CreateAddressUseCase {
       city,
       uf,
     });
-
     return address;
   }
 }
