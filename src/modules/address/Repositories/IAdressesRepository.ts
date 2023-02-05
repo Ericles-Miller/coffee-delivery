@@ -1,7 +1,7 @@
-import { ICreateAdressesDTO } from '../DTOs/ICreateAddressDTO';
+import { ICreateAddressDTO } from '../DTOs/ICreateAddressDTO';
 
-interface IAdressesRepository {
-    create(data:ICreateAdressesDTO): Promise<void>;
+interface IAddressRepository {
+    create(data:ICreateAddressDTO): Promise<void>;
 }
 
-export { IAdressesRepository };
+export { IAddressRepository };
