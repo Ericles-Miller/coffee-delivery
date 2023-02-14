@@ -4,7 +4,7 @@ import { CreateAddressController } from '../../../modules/address/useCases/Creat
 
 const addressRoutes = Router();
 
-addressRoutes.post('/create');
+// addressRoutes.post('/create');
 
 const createAddressController = new CreateAddressController();
 
