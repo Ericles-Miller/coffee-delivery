@@ -1,7 +1,7 @@
 import { inject, injectable } from 'tsyringe';
 
-import { Address } from '../../infra/typeorm/entities/Address';
-import { IAddressRepository } from '../../Repositories/IAdressesRepository';
+import { Address } from '@modules/address/infra/typeorm/entities/Address';
+import { IAddressRepository } from '@modules/address/Repositories/IAdressesRepository';
 
 interface IRequest{
     cep: number;
