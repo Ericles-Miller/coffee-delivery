@@ -5,9 +5,9 @@
     "username": "postgres",
     "password": "@18er0821",
     "database": "coffee_delivery", 
-    "migrations": ["./src/shared/database/migrations/*.ts"],
+    "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
     "entities": ["./src/modules/**/entities/*.ts"],
     "cli": {
-      "migrationsDir": "./src/shared/database/migrations"
+      "migrationsDir": "./src/shared/infra/typeorm/migrations"
     }
   } 

@@ -1,11 +1,10 @@
 import express from 'express';
 
 import 'reflect-metadata';
-import '../Container';
-// import createConnection from '../database';
+import '@shared/Container';
 import { router } from './routes';
+import '@shared/infra/typeorm';
 
-// createConnection();
 const app = express();
 
 app.use(express.json());
