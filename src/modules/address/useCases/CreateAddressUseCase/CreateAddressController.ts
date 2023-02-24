@@ -3,7 +3,6 @@ import { container } from 'tsyringe';
 
 import { CreateAddressUseCase } from './CreateAddressUseCase';
 
-
 class CreateAddressController {
   async handle(request: Request, response: Response): Promise<Response> {
     const {

@@ -1,31 +1,22 @@
 import { Column, Entity, PrimaryColumn } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
 
-@Entity('address')
-class Address {
+@Entity('users')
+class User {
   @PrimaryColumn()
   id?: string;
-
   @Column()
-  cep!: number;
-
+  name!: string;
   @Column()
-  street!: string;
-
+  email!: string;
   @Column()
-  number!: number;
-
+  password!: string;
   @Column()
-  district!: string;
-
+  userName!: string;
+  // avatar: string;
   @Column()
-  complement?: string;
-
-  @Column()
-  city!: string;
-
-  @Column()
-  uf!: string;
+  isAdmin!: boolean;
+  // create_at: Date;
 
   constructor() {
     if (!this.id) {
@@ -34,4 +25,4 @@ class Address {
   }
 }
 
-export { Address };
+export { User };
