@@ -2,9 +2,9 @@ import express from 'express';
 
 import 'reflect-metadata';
 import '@shared/Container';
-import { router } from './routes';
-
 import createConnection from '@shared/infra/typeorm';
+
+import { router } from './routes';
 
 const app = express();
 
