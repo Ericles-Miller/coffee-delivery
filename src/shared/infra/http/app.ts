@@ -1,7 +1,7 @@
 import express from 'express';
 
 import 'reflect-metadata';
-import '@shared/Container';
+import '@shared/Container/index';
 import createConnection from '@shared/infra/typeorm';
 
 import { router } from './routes';
