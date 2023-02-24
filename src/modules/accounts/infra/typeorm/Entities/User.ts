@@ -6,16 +6,16 @@ class User {
   @PrimaryColumn()
   id?: string;
   @Column()
-  name: string;
+  name!: string;
   @Column()
-  email: string;
+  email!: string;
   @Column()
-  password: string;
+  password!: string;
   @Column()
-  userName: string;
+  userName!: string;
   // avatar: string;
   @Column()
-  isAdmin: boolean;
+  isAdmin!: boolean;
   // create_at: Date;
 
   constructor() {

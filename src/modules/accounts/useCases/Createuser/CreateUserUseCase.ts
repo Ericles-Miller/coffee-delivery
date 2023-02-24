@@ -1,14 +1,12 @@
 import { inject, injectable } from 'tsyringe';
 
-import { UsersRepository } from '@modules/accounts/infra/typeorm/repositories/UsersRespository';
-
 import { ICreatedUserDTO } from '../../DTOs/ICreateUserDTO';
 import { IUserRepository } from '../../Repositories/IUserRepository';
 
 @injectable()
 class CreateUserUseCase {
   constructor(
-    @inject(UsersRepository)
+    @inject('UsersRepository')
     private userRepository: IUserRepository,
   ) {}
 

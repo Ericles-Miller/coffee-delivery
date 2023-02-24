@@ -7,25 +7,25 @@ class Address {
   id?: string;
 
   @Column()
-  cep: number;
+  cep!: number;
 
   @Column()
-  street: string;
+  street!: string;
 
   @Column()
-  number: number;
+  number!: number;
 
   @Column()
-  district: string;
+  district!: string;
 
   @Column()
   complement?: string;
 
   @Column()
-  city: string;
+  city!: string;
 
   @Column()
-  uf: string;
+  uf!: string;
 
   constructor() {
     if (!this.id) {
