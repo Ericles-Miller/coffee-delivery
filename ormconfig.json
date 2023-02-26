@@ -1,12 +1,12 @@
 {
     "type": "postgres",
-    "port": 5433, 
+    "port": 5432, 
     "host": "localhost", 
     "username": "postgres",
     "password": "@18er0821",
     "database": "coffee_delivery", 
     "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
-    "entities": ["/src/modules/**/infra/typeorm/entities/*.ts"],
+    "entities": ["./src/modules/**/infra/typeorm/entities/*.ts"],
     "cli": {
       "migrationsDir": "./src/shared/infra/typeorm/migrations"
     }
